@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
         AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
 
-        Toast.makeText(MainActivity.this,""+ authCredential.getProvider(),Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,"Logged in via "+ authCredential.getProvider(),Toast.LENGTH_LONG).show();
 
         firebaseAuth.signInWithCredential(authCredential)
                 .addOnCompleteListener(MainActivity.this, new OnCompleteListener() {
