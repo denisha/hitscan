@@ -1,5 +1,9 @@
 package testalot.com.hitscanapp;
 
+
+import android.app.Activity;
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -31,7 +35,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+
 public class MainActivity extends AppCompatActivity {
+    MediaPlayer mysound;
 
     // TAG is for show some tag logs in LOG screen.
     public static final String TAG = "MainActivity";
@@ -127,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
         startActivityForResult(AuthIntent, RequestSignInCode);
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
