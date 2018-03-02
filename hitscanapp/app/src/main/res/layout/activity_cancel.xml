@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +10,28 @@
         android:layout_width="255dp"
         android:layout_height="205dp"
         android:layout_marginTop="36dp"
+        android:contentDescription="@mission_aborted_page"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mission_aborted" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@android:style/Widget.Button.Transparent"
+        android:layout_width="110dp"
+        android:layout_height="53dp"
+        android:text="Exit"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@android:style/Widget.Button.Transparent"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:text="Back to Scan"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="257dp" />
 </android.support.constraint.ConstraintLayout>

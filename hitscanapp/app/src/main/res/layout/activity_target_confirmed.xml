@@ -6,13 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/button5"
+        style="@android:style/Widget.Button.Transparent"
+        android:layout_width="111dp"
+        android:layout_height="48dp"
+        android:text="Close"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="287dp" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="320dp"
         android:layout_height="251dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@target_confirmed"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/target_confirmed" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@android:style/Widget.Button.Transparent"
+        android:layout_width="111dp"
+        android:layout_height="48dp"
+        android:text="Scan +"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="287dp" />
 </android.support.constraint.ConstraintLayout>
