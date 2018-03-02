@@ -53,66 +53,23 @@
           </tr>
         </thead>
         <tbody>
+          {% if log_items %}
+
+          {% for item in log_items %}
           <tr>
-            <td>iPhone 5s</td>
-            <td>Its an Iphone</td>
-            <td>John Snow</td>
-            <td>john@example.com</td>
-            <td>Checked In</td>
-            <td>2018-08-14 09:00</td>
+            <td>{{ item.device.model }}</td>
+            <td>{{ item.device.description }}</td>
+            <td>{{ item.user.name }}</td>
+            <td>{{ item.user.email }}</td>
+            <td>{{ item.status }}</td>
+            <td>{{ item.date }}</td>
             <td>
               <button type="button" class="btn btn-success btn-sm">Update</button>
               <button type="button" class="btn btn-danger btn-sm">Delete</button>
             </td>
           </tr>
-          <tr>
-            <td>Samsung S8</td>
-            <td>Its an Samsung</td>
-            <td>Arya Stark</td>
-            <td>john@example.com</td>
-            <td>Checked In</td>
-            <td>2018-08-14 09:00</td>
-            <td>
-              <button type="button" class="btn btn-success btn-sm">Update</button>
-              <button type="button" class="btn btn-danger btn-sm">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Nokia 8</td>
-            <td>Its an Iphone</td>
-            <td>Peter Baelish</td>
-            <td>john@example.com</td>
-            <td>Checked In</td>
-            <td>2018-08-14 09:00</td>
-            <td>
-              <button type="button" class="btn btn-success btn-sm">Update</button>
-              <button type="button" class="btn btn-danger btn-sm">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>iPhone 5s</td>
-            <td>Its an Iphone</td>
-            <td>Dragon Queen</td>
-            <td>john@example.com</td>
-            <td>Checked In</td>
-            <td>2018-08-14 09:00</td>
-            <td>
-              <button type="button" class="btn btn-success btn-sm">Update</button>
-              <button type="button" class="btn btn-danger btn-sm">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>iPhone 5s</td>
-            <td>Its an Iphone</td>
-            <td>Sir Davos</td>
-            <td>john@example.com</td>
-            <td>Checked In</td>
-            <td>2018-08-14 09:00</td>
-            <td>
-              <button type="button" class="btn btn-success btn-sm">Update</button>
-              <button type="button" class="btn btn-danger btn-sm">Delete</button>
-            </td>
-          </tr>
+          {% endfor %}
+          {% endif %}
         </tbody>
       </table>
   </main>
