@@ -15,7 +15,7 @@ public class databasehelper {
     DatabaseReference myRefDevice = database.getReference("DEVICE");
     DatabaseReference myRefUser = database.getReference("User");
 
-    private static final String TAG = "PostDetailActivity";
+
 
 
     public void checkoutDevice(Device_Status ds)

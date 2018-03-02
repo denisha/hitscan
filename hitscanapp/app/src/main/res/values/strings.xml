@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">hitscan</string>
+    <string name="title_activity_scan_activiy">scan_activiy</string>
 </resources>

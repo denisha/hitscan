@@ -3,6 +3,7 @@
     package="com.androidjson.firebasegooglelogin_androidjsoncom">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,10 +15,13 @@
         <activity android:name="testalot.com.hitscanapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="testalot.com.hitscanapp.scanActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

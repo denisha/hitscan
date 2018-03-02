@@ -179,6 +179,8 @@ public class MainActivity extends AppCompatActivity {
                             String x = firebaseAuth.getCurrentUser().getUid();
                             System.out.println("*******************" + x);
 
+
+                            SetUser(firebaseUser);
                             // Showing Log out button.
                             SignOutButton.setVisibility(View.VISIBLE);
 
@@ -204,6 +206,13 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+
+    public void SetUser(FirebaseUser firebaseUser){
+
+
+        databasehelper dh = new databasehelper();
+        dh.setUser(new User(firebaseUser.getUid(),firebaseUser.getDisplayName()));
+    }
     public void UserSignOutFunction() {
 
         // Sign Out the User.
