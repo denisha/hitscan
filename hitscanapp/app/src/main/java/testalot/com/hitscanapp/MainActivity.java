@@ -142,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == RequestSignInCode){
 
+            System.out.println("Data " + data);
+
             GoogleSignInResult googleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
 
             if (googleSignInResult.isSuccess()){
@@ -174,6 +176,8 @@ public class MainActivity extends AppCompatActivity {
 
                             // Getting Current Login user details.
                             FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                            String x = firebaseAuth.getCurrentUser().getUid();
+                            System.out.println("*******************" + x);
 
                             // Showing Log out button.
                             SignOutButton.setVisibility(View.VISIBLE);
@@ -190,6 +194,8 @@ public class MainActivity extends AppCompatActivity {
 
                             // Setting up Email into TextView.
                             LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
+
+
 
                         }else {
                             Toast.makeText(MainActivity.this,"Something Went Wrong",Toast.LENGTH_LONG).show();

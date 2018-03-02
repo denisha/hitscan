@@ -1,38 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textAllCaps="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
     tools:context="testalot.com.hitscanapp.MainActivity">
-    <!--<ImageView-->
-    <!--android:id="@+id/im1"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:adjustViewBounds="false"-->
-    <!--android:contentDescription="@background"-->
-    <!--android:scaleType="fitXY"-->
-    <!--android:src="@drawable/home"-->
-    <!--android:visibility="invisible"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--app:layout_constraintTop_toTopOf="parent"-->
-    <!--app:layout_constraintVertical_bias="1.0" />-->
-    <!--<ImageView-->
-    <!--android:id="@+id/imageView2"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--app:srcCompat="@drawable/hitscan_logo"-->
-    <!--tools:layout_editor_absoluteX="50dp"-->
-    <!--tools:layout_editor_absoluteY="80dp" />-->
+
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:visibility="visible" />
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:id="@+id/sign_out"
         android:layout_width="fill_parent"
@@ -43,17 +24,19 @@
         android:layout_alignParentStart="true"
         android:visibility="gone"
         />
+
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="uk"
+        android:text=""
         android:gravity="center"
         android:textSize="15dp"
         android:textColor="#000"
         />
+
     <TextView
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
@@ -65,22 +48,6 @@
         android:textSize="15dp"
         android:textColor="#000"
         />
-    <!--<ImageView-->
-    <!--android:id="@+id/im1"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:contentDescription="@background"-->
-    <!--android:scaleType="fitXY"-->
-    <!--android:src="@drawable/home"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--app:layout_constraintTop_toTopOf="parent"-->
-    <!--app:layout_constraintVertical_bias="1.0" />-->
-    <!--<ImageView-->
-    <!--android:id="@+id/imageView2"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--app:srcCompat="@drawable/hitscan_logo"-->
-    <!--tools:layout_editor_absoluteX="50dp"-->
-    <!--tools:layout_editor_absoluteY="80dp" />-->
-</android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>
