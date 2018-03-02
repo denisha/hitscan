@@ -1,6 +1,8 @@
 package testalot.com.hitscanapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -181,8 +184,8 @@ public class MainActivity extends AppCompatActivity {
                             // Setting up Email into TextView.
                             LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
 
-                            Intent i = new Intent(MainActivity.this, ScannerActivity.class);
-                            startActivity(i);
+                           Intent i = new Intent(MainActivity.this, ScannerActivity.class);
+                           startActivity(i);
 
 
 
@@ -209,10 +212,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onResult(@NonNull Status status) {
 
                         // Write down your any code here which you want to execute After Sign Out.
-
-                        ///*************//
-
-
 
                     // Printing Logout toast message on screen.
                         Toast.makeText(MainActivity.this, "Logout Successfully", Toast.LENGTH_LONG).show();
