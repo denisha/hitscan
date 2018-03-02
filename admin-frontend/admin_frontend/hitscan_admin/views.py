@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 import pyrebase
+from django.template import loader
 
  # Initialize Firebase
 config = {
@@ -16,6 +17,13 @@ firebase = pyrebase.initialize_app(config)
 
 
 def index(request):
+    template = loader.get_template('hitscan_admin/index.html')
+    context = {
+        'latest_question_list': 'latest_question_list',
+    }
+    return HttpResponse(template.render(context, request))
+
+def __fb_test__():
     auth = firebase.auth()
     user = auth.sign_in_with_email_and_password('khayelihle.tshuma@takealot.com', 'password')
     db = firebase.database()
@@ -31,4 +39,3 @@ def index(request):
 
     # Pass the user's idToken to the push method
     results = db.child("DEVICE").get(user['idToken'])
-    return HttpResponse('This is HitScan.')
