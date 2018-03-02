@@ -30,7 +30,7 @@ public class databasehelper {
 
     public void setUser(User user){
 
-        myRefUser.child(user.getUserID() + "1234/").setValue(user);
+        myRefUser.child(user.getUserID() + "/").child("Name").setValue(user.getName());
     }
 
 
