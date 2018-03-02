@@ -1,9 +1,5 @@
 package testalot.com.hitscanapp.datalayer;
 
-/**
- * Created by yongama.dilima on 2018/03/01.
- */
-
 import com.google.firebase.database.*;
 import testalot.com.hitscanapp.Model.*;
 import testalot.com.hitscanapp.Model.Device;
@@ -17,6 +13,7 @@ public class databasehelper {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRefDeviceCheckOut = database.getReference("DEVICE_STATUS");
     DatabaseReference myRefDevice = database.getReference("DEVICE");
+    DatabaseReference myRefUser = database.getReference("User");
 
     private static final String TAG = "PostDetailActivity";
 
@@ -33,10 +30,8 @@ public class databasehelper {
 
     public void setUser(User user){
 
-        myRefDeviceCheckOut.child(user.getName() + "/").setValue(user);
+        myRefUser.child(user.getUserID() + "1234/").setValue(user);
     }
-
-
 
 
 }

@@ -31,6 +31,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import testalot.com.hitscanapp.datalayer.databasehelper;
+import testalot.com.hitscanapp.Model.User;
+
+
 public class MainActivity extends AppCompatActivity {
 
     // TAG is for show some tag logs in LOG screen.
@@ -59,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
@@ -142,7 +149,12 @@ public class MainActivity extends AppCompatActivity {
                 GoogleSignInAccount googleSignInAccount = googleSignInResult.getSignInAccount();
 
                 FirebaseUserAuth(googleSignInAccount);
+
+
             }
+
+
+
 
         }
     }
