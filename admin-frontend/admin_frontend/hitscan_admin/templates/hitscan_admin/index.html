@@ -38,7 +38,16 @@
 
       <br>
 
-      <button type="button" class="btn btn-info float-right">Add new devices</button>
+
+      <!--<button type="button" class="btn btn-info float-right">Add new devices</button>-->
+
+    
+    <form class="form-signin" id="login_form" method="post" action="add">
+      {% csrf_token %} 
+      <button type="submit" class="btn btn-info float-right">Add new devices</button>
+    </form>
+
+      
 <br><br>
       <table class="table table-striped">
         <thead>

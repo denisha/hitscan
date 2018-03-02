@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 import pyrebase
 from django.template import loader
 
@@ -23,7 +23,15 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def __fb_test__():
+def add_devices(request):
+    template = loader.get_template('hitscan_admin/add_devices.html')
+    context = {
+        'latest_question_list': 'latest_question_list',
+    }
+    return HttpResponse(template.render(context, request))
+
+'''def __fb_test__():
+    
     auth = firebase.auth()
     user = auth.sign_in_with_email_and_password('khayelihle.tshuma@takealot.com', 'password')
     db = firebase.database()
@@ -38,4 +46,41 @@ def __fb_test__():
     results = db.child("DEVICE").push(data, user['idToken'])
 
     # Pass the user's idToken to the push method
-    results = db.child("DEVICE").get(user['idToken'])
+    results = db.child("DEVICE").get(user['idToken'])'''
+
+
+  
+
+
+def get_details(request):
+    # if this is a POST request we need to process the form data
+
+    template = loader.get_template('hitscan_admin/details.html')
+    context = {
+        'latest_question_list': 'latest_question_list',
+    }
+    
+    if request.method == 'POST':
+        auth = firebase.auth()
+        user = auth.sign_in_with_email_and_password('ryno.hoorn@takealot.com', 'test123')
+        db = firebase.database()
+        from IPython import embed 
+        embed()
+        data = {
+            'IMEI': request.POST['ID'],
+            'deviceModel': request.POST['model_id'],}
+            # 'discription': request.POST.descript_id,
+            # 'serialNumber': request.POST.serial_id,
+            # 'team': request.POST.team_id}
+
+        # Pass the user's idToken to the push method
+        results = db.child("device").push(data, user['idToken'])
+
+        # Pass the user's idToken to the push method
+        results = db.child("device").get(user['idToken'])
+
+        return HttpResponse(template.render(context, request))
+
+    # if a GET (or any other method) we'll create a blank form
+    #else:
+    #  return HttpResponseRedirect('Devices added unsuccessfully')
