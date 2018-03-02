@@ -135,8 +135,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == RequestSignInCode){
 
-            System.out.println("Data " + data);
-
             GoogleSignInResult googleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
 
             if (googleSignInResult.isSuccess()){
@@ -183,6 +181,9 @@ public class MainActivity extends AppCompatActivity {
                             // Setting up Email into TextView.
                             LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
 
+                            Intent i = new Intent(MainActivity.this, ScannerActivity.class);
+                            startActivity(i);
+
 
 
                         }else {
@@ -209,7 +210,11 @@ public class MainActivity extends AppCompatActivity {
 
                         // Write down your any code here which you want to execute After Sign Out.
 
-                        // Printing Logout toast message on screen.
+                        ///*************//
+
+
+
+                    // Printing Logout toast message on screen.
                         Toast.makeText(MainActivity.this, "Logout Successfully", Toast.LENGTH_LONG).show();
 
                     }
