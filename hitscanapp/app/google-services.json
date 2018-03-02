@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "988111583129",
+    "firebase_url": "https://hitscan-25b2a.firebaseio.com",
+    "project_id": "hitscan-25b2a",
+    "storage_bucket": "hitscan-25b2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988111583129:android:966928ddeaf04bb5",
+        "android_client_info": {
+          "package_name": "com.testalot.hitscan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988111583129-be0d7tkfl1mvd87dcjoogjhpdq0s3ih8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh2f8YkB9yQxxI5aGhRzeBlNOISDv2pg4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988111583129:android:a05bc25a7cf63400",
+        "android_client_info": {
+          "package_name": "testalot.com.hitscanapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988111583129-be0d7tkfl1mvd87dcjoogjhpdq0s3ih8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh2f8YkB9yQxxI5aGhRzeBlNOISDv2pg4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
