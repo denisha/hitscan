@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         LoginUserEmail = (TextView) findViewById(R.id.textViewEmail);
 
         signInButton = (com.google.android.gms.common.SignInButton)findViewById(R.id.sign_in_button);
+        signInButton.bringToFront();
 
         // Getting Firebase Auth Instance into firebaseAuth object.
         firebaseAuth = FirebaseAuth.getInstance();
