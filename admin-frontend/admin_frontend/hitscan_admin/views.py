@@ -39,3 +39,10 @@ def __fb_test__():
 
     # Pass the user's idToken to the push method
     results = db.child("DEVICE").get(user['idToken'])
+
+
+def update_(request):
+    template = loader.get_template('hitscan_admin/update.html')
+    context = {
+    }
+    return HttpResponse(template.render(context, request))    
